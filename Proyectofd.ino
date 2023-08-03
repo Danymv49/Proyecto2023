@@ -14,6 +14,11 @@ int sen3 = 6;
 int sen4 = 5;
 int sen5 = 4;
 int sen6 = 3;
+String m1 = " ";
+String m2 = " ";
+String m3 = " ";
+String m4 = " ";
+String m5 = " ";
 
 void setup() {
   Serial.begin(9600);
@@ -45,54 +50,63 @@ void loop() {
     }
    int p1 = 0;
    p1 = digitalRead(sen2);
-   if (p1 == 1){
-   lcd.clear();
-   lcd.setCursor(0,0);
-   lcd.print("==> Parqueo <==");
+   if (p1 = 0){
+     m1 = "O";
    }else { 
-    Serial.print(" 0 ");
-    delay(100);   
+     m1 = "X" ;  
    }
   int p2 = 0;
    p2 = digitalRead(sen3);
-   if (p2 == 1){
-    Serial.print (" 1 ");
+   if (p2 = 0){
+    m2 = "O";
    }else { 
-    Serial.print (" 0 ");
-    delay(100);
+    m2 = "X";
    }
    
  int p3 = 0;
    p3 = digitalRead(sen4);
-   if (p3 == 1){
-    
+   if (p3 = 0){
+    m3 = "O";
    }else { 
-    Serial.print (" 0 ");
-    delay(100);
+    m3 = "x";
+    
    }
   int p4 = 0;
    p4 = digitalRead(sen5);
-   if (p4 == 1){
-    Serial.print(" 1 ");
+   if (p4 = 0){
+    m4 = "O";
    }else { 
-    Serial.print(" 0 ");
-    delay(100);
+    m4 = "x";
    }
   int p5 = 0;
    p5 = digitalRead(sen6);
-   if (p5 == 1){
-    Serial.print(" 1 ");
+   if (p5 = 0){
+    m5 = "O";
    }else { 
-    Serial.print(" 0 ");
-    delay(1000);
+    m5 = "X";
    }
-   Serial.println(" ");
   
- 
- 
   
- 
+  lcd.setCursor(0,0);
+  lcd.print("hola");
+  /*lcd.setCursor(0,7);
+  lcd.print("p2_"+m2);
+  lcd.setCursor(0,13);
+  lcd.print("p3_"+m3);
+  lcd.setCursor(1,4);
+  lcd.print("p4_"+m4);
+  lcd.setCursor(1,10);
+  lcd.print("p5_"+m5);
+  
+ */
  
     
  
 }
+
+
+
+
+
+
+ 

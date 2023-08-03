@@ -1,3 +1,8 @@
+/* Proyecto tecnologico 2023 Parqueo inteligente 
+    integrantes:
+    Manfredy Daniel Mazariegos Villatoro 
+    Jose Armando Morales Mejia 
+    Fernando Jose Gonzalez Mejia */
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27,20,4);
 #include <Servo.h>
@@ -41,7 +46,9 @@ void loop() {
    int p1 = 0;
    p1 = digitalRead(sen2);
    if (p1 == 1){
-    Serial.print(" 1 ");
+   lcd.clear();
+   lcd.setCursor(0,0);
+   lcd.print("==> Parqueo <==");
    }else { 
     Serial.print(" 0 ");
     delay(100);   
@@ -58,7 +65,7 @@ void loop() {
  int p3 = 0;
    p3 = digitalRead(sen4);
    if (p3 == 1){
-    Serial.print (" 1 ");
+    
    }else { 
     Serial.print (" 0 ");
     delay(100);

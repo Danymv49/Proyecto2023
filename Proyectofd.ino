@@ -26,7 +26,15 @@ void setup() {
   lcd.backlight();
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("==> Parqueo <==");
+  lcd.print("p1=" + m1);
+  lcd.setCursor(0,7);
+  lcd.print("p2_"+m2);
+  lcd.setCursor(0,13);
+  lcd.print("p3_"+m3);
+  lcd.setCursor(1,4);
+  lcd.print("p4_"+m4);
+  lcd.setCursor(1,10);
+  lcd.print("p5_"+m5);
   pinMode(sen1, INPUT);
   pinMode(sen2, INPUT);
   pinMode(sen3, INPUT);
@@ -86,19 +94,8 @@ void loop() {
     m5 = "X";
    }
   
-  
-  lcd.setCursor(0,0);
-  lcd.print("hola");
-  /*lcd.setCursor(0,7);
-  lcd.print("p2_"+m2);
-  lcd.setCursor(0,13);
-  lcd.print("p3_"+m3);
-  lcd.setCursor(1,4);
-  lcd.print("p4_"+m4);
-  lcd.setCursor(1,10);
-  lcd.print("p5_"+m5);
-  
- */
+ 
+ 
  
     
  

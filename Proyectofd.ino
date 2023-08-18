@@ -24,17 +24,6 @@ void setup() {
   Serial.begin(9600);
   lcd.init();
   lcd.backlight();
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("p1=" + m1);
-  lcd.setCursor(0,7);
-  lcd.print("p2_"+m2);
-  lcd.setCursor(0,13);
-  lcd.print("p3_"+m3);
-  lcd.setCursor(1,4);
-  lcd.print("p4_"+m4);
-  lcd.setCursor(1,10);
-  lcd.print("p5_"+m5);
   pinMode(sen1, INPUT);
   pinMode(sen2, INPUT);
   pinMode(sen3, INPUT);
@@ -94,7 +83,18 @@ void loop() {
     m5 = "X";
    }
   
- 
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("p1=" + m1);
+  lcd.setCursor(7,0);
+  lcd.print("p2_"+m2);
+  lcd.setCursor(13,0);
+  lcd.print("p3_"+m3);
+  lcd.setCursor(4,1);
+  lcd.print("p4_"+m4);
+  lcd.setCursor(10,1);
+  lcd.print("p5_"+m5);
+  delay(200);
  
  
     

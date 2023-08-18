@@ -47,40 +47,40 @@ void loop() {
     }
    int p1 = 0;
    p1 = digitalRead(sen2);
-   if (p1 = 0){
-     m1 = "O";
+   if (p1 == 1){
+     m1 = "X";
    }else { 
-     m1 = "X" ;  
+     m1 = "O" ;  
    }
   int p2 = 0;
    p2 = digitalRead(sen3);
-   if (p2 = 0){
-    m2 = "O";
-   }else { 
+   if (p2 == 1){
     m2 = "X";
+   }else { 
+    m2 = "O";
    }
    
  int p3 = 0;
    p3 = digitalRead(sen4);
-   if (p3 = 0){
-    m3 = "O";
+   if (p3 == 1){
+    m3 = "X";
    }else { 
-    m3 = "x";
+    m3 = "O";
     
    }
   int p4 = 0;
    p4 = digitalRead(sen5);
-   if (p4 = 0){
-    m4 = "O";
+   if (p4 == 1){
+    m4 = "X";
    }else { 
-    m4 = "x";
+    m4 = "O";
    }
   int p5 = 0;
    p5 = digitalRead(sen6);
-   if (p5 = 0){
-    m5 = "O";
-   }else { 
+   if (p5 == 1){
     m5 = "X";
+   }else { 
+    m5 = "O";
    }
   
   lcd.clear();

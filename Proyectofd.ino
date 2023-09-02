@@ -7,6 +7,8 @@
 LiquidCrystal_I2C lcd(0x27,20,4);
 #include <Servo.h>
 Servo servo;
+Servoservo1;
+int ser1 = 10;
 int ser = 9;
 int sen1 = 8;
 int sen2 = 7;
@@ -31,16 +33,16 @@ void setup() {
   pinMode(sen5, INPUT);
   pinMode(sen6, INPUT);
   servo.attach(ser);
- 
+  servo.attach(ser1);
 
 
 }
 
 void loop() {
+  int l = 
   int i = 0;
   i = digitalRead(sen1);
-  //Serial.println(i);
-  if (i>0){
+    if (i>0){
     servo.write(90);
     }else{ 
       servo.write(0);
